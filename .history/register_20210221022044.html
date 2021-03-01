@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/the-datepicker.css" rel="stylesheet" />
+
+</head>
+<header> 
+    <a href="index.html" class="logo">XSTARRIVER</a>
+     <div class="nav_menu"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#"class="active">Account</a></li>
+            </ul>
+        </nav>
+</header>
+
+<form method="post" id="register">
+    <h1>Sign Up</h1>
+    <div class="left-column">
+        <fieldset id="page1">
+            <legend><span class="number">1</span>Basic Information</legend>
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="user_name" required>
+
+            <label for="name">Phone number:</label>
+            <input type="tel" id="phone" name="phone no." placeholder="012345678" pattern="[0-9]{8}" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="confirm_password" required>
+        </fieldset>
+    </div>
+    <div class="right-column">
+        <fieldset id="page2">
+            <legend><span class="number">2</span>Your profile</legend>
+            <label for="name" pattern="[a-zA-Z\s]+">English Name (full name):</label>
+            <input type="text" id="name" name="user_name" required>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="m">Male
+            <input type="radio" name="gender" value="f">Female
+            <input type="radio" name="gender" value="other" required>Other
+
+        </fieldset>
+
+        <fieldset id="page3">
+            <label for="gender">Date of birth:</label>
+            <input id="Birth" type="date" name="birthday" max="2010-12-31" min="1921-01-01" required>
+            <label for="level">Education level:</label>
+            <select id="level" name="user_level" required>
+         
+            <option value="F4">Form 4</option>
+            <option value="F5">Form 5</option>
+            <option value="F6">Form 6</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Other">Other</option>
+          
+            </select>
+
+             <label>Profile picture: </label>
+            <div class="img_show" >
+                <input id="picture" type="file" name="photo" accept="image/*" onchange="load" required>
+            </div>
+        </fieldset>
+       <img id="previewImg">
+    </div>
+      
+    <button id="submit" class="btn btn-primary" type="submit">Sign Up</button>
+</form>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="/register.js"></script>
+</body>
+
+</html>

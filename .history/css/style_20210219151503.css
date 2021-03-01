@@ -1,0 +1,228 @@
+body
+{
+  background-image: url(/img/bg_01.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Navigation bar */
+header
+{
+  position: relative;
+  max-width: 1430px;
+  margin: 20px 30px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.logo
+{
+  color: black;
+  height: 50px;
+  font-size: 28px;
+  line-height: 65px;
+  padding: 7px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: left;
+  font-weight: 450;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+nav
+{
+  float: right;
+}
+
+nav ul
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li
+{
+  list-style: none;
+}
+
+nav ul li a
+{
+  font-size: 18px;
+  display: block;
+  margin: 19px 25px;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+nav ul li a.active, 
+nav ul li a:hover
+{
+  background: linear-gradient(to right,#eb6825,#f17a28,#fa962b);
+  color: #fff;
+  border-radius: 10px; 
+}
+
+/* Title */
+
+#title
+{
+  height: 100px;
+  width: 800px;
+  position: relative;
+  text-align: left;
+  padding-left: 75px;
+  padding-top: 65px;
+  color: #294944;
+  font-family: Arial black;
+}
+
+#desc
+{
+  font-size: 22px;
+  text-decoration: none;
+  padding-top: 35px;
+  padding-left: 75px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: start;
+}
+
+.button
+{
+  margin-left: 150px;
+  padding: 13px 20px;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to right,#eb6825,#f17a28,#fa962b);
+  color: #fff;
+  border-radius: 15px; 
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  transition: 0.4s;
+}
+
+.center 
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+ 
+}
+.popup 
+{
+  width:330px;
+  padding:30px 20px;
+  border-radius:10px;
+  box-sizing:border-box;
+  z-index:2;
+  text-align:center;
+  opacity:0;
+  top:-200%;
+  transform:translate(-50%,-50%) scale(0.5);
+  transition: opacity 300ms ease-in-out,
+              top 1000ms ease-in-out,
+              transform 1000ms ease-in-out;
+}
+.popup.active 
+{
+  background:#f5f5f5;
+  opacity:1;
+  top:50%;
+  transform:translate(-50%,-50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+
+.popup .dismiss-btn 
+{
+  margin-top:15px;
+}
+.popup .dismiss-btn .button
+{
+  cursor:pointer;
+  transition: all 300ms ease-in-out;
+}
+.popup .dismiss-btn button:hover 
+{
+  color:#111;
+  background:#f5f5f5;
+}
+.popup .dismiss-btn
+{
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  cursor: pointer;
+}
+.popup > div 
+{
+  position:relative;
+  top:10px;
+  opacity:0;
+}
+.popup.active > div 
+{
+  top:0px;
+  opacity:1;
+}
+.popup.active .icon 
+{
+  transition: all 300ms ease-in-out 250ms;
+}
+.popup.active .dismiss-btn 
+{
+  transition: all 300ms ease-in-out 400ms;
+}
+	  
+.popup header
+{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+.popup .form-outer
+{
+  width: 100%;
+}
+
+.form-outer form
+{
+  display: flex;
+  width: 400%;
+}
+
+.form-outer form .page
+{
+  width: 25%;
+}
+
+.form-outer form .page .title
+{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+img
+{
+  position: relative;
+  height: 600px;
+  width: auto;
+  float: right;
+  top: -150px;
+  right: 100px;
+}
